@@ -1,13 +1,18 @@
 //
 //  ViewController.h
-//  SlideShowApp02
+//  SlideShowApp01
 //
-//  Created by kentaro_miura on 13/02/27.
+//  Created by kentaro_miura on 13/02/26.
 //  Copyright (c) 2013年 kentaro_miura. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    UIImageView *mainImage;
+}
+-(void)setImage;
+-(void)nextButton;
+-(void)nextImage;
 @end
