@@ -12,6 +12,7 @@
 {
     UIImageView *mainImage;
 }
+- (IBAction)MyButton:(id)sender;
 -(void)setImage;
 -(void)nextButton;
 -(void)nextImage;

@@ -34,22 +34,46 @@
 
 - (void)getArray
 {
-    imageArray = [NSArray arrayWithObjects:
-                  @"dummy00.png",
-                  @"dummy01.png",
-                  @"dummy02.png",
-                  @"dummy03.png",
-                  @"dummy04.png",
-                  @"dummy05.png",
-                  @"dummy06.png",
-                  @"dummy07.png",
-                  @"dummy08.png",
+    //NSString *imageArray[4];
+    //imageArray[0]=@"dummy00.png";
+    //imageArray[1]=@"dummy01.png";
+    //imageArray[2]=@"dummy02.png";
+    //imageArray[3]=@"dummy03.png";
+    //imageArray = [NSArray arrayWithObjects:
+                  //@"dummy00.png",
+                  //@"dummy01.png",
+                  //@"dummy02.png",
+                  //@"dummy03.png",
+                  //@"dummy04.png",
+                  //@"dummy05.png",
+                  //@"dummy06.png",
+                  //@"dummy07.png",
+                  /*@"dummy08.png",
                   @"dummy09.png",
-                  nil];
+                  nil];*/
     //変数selectedIndexの初期値を0（先頭画像）にセット
     selectedIndex = 0;
     //配列imageArryの要素数を取得
-    arrCount = [imageArray count];
+    //arrCount = [imageArray count];
+}
+
+- (IBAction)MyButton:(id)sender {
+    NSString *imageList[4];
+    imageList[0]=@"dummy00.png";
+    imageList[1]=@"dummy01.png";
+    imageList[2]=@"dummy02.png";
+    imageList[3]=@"dummy03.png";
+    arrCount = 4;
+    selectedIndex++;
+    if (selectedIndex == arrCount) {
+        selectedIndex = 0;
+    }
+   
+
+    UIImage *toBeDisplayed = [UIImage imageNamed:imageList[selectedIndex]];
+    [mainImage setImage:toBeDisplayed];
+    NSString *abc = imageList[selectedIndex];
+    NSString *def = abc;
 }
 
 - (void)setImage
